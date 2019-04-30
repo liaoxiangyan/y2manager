@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.link.LinkMapper">
+    <!--查询全部信息-->
+    <select id="getLinkList" resultType="com.bdqn.pojo.Link">
+        SELECT * FROM link;
+        <!--<trim suffix="where" suffixOverrides="and | or">
+    <if test="">
+    </if>
+</trim>-->
+    </select>
+<!--
+    <select id="getLinkByName" resultType="com.bdqn.pojo.Link">
+
+    </select>
+
+    <insert id="addLink" parameterType="com.bdqn.pojo.Link">
+
+    </insert>
+
+    <update id="updateLink" parameterType="com.bdqn.pojo.Link">
+
+    </update>
+
+    <delete id="delLink" parameterType="Integer">
+
+    </delete>-->
+</mapper>

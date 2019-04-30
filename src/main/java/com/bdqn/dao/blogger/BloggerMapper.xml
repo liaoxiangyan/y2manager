@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.blogger.BloggerMapper">
+    <!--查询全部信息-->
+    <select id="getBloggerList" resultType="com.bdqn.pojo.Blogger" parameterType="com.bdqn.pojo.Blogger">
+        SELECT * FROM blogger AS b
+        INNER JOIN bloggerType AS bt ON b.bId=bt.bTypeId
+        INNER JOIN link AS l ON bt.bTypeId=l.linkid
+        INNER JOIN fileUpload AS f ON l.linkid=f.fileUploadId
+<!--<trim suffix="where" suffixOverrides="and | or">
+    <if test="">
+    </if>
+</trim>-->
+    </select>
+<!--
+    <select id="getBloggerByName" resultType="com.bdqn.pojo.Blogger">
+SELECT * FROM `blogger` where Name=#{};
+    </select>
+
+    <insert id="addBlogger" parameterType="com.bdqn.pojo.Blogger">
+INSERT INTO `blogger`()
+VALUES(NULL,#{},#{},#{},#{},#{},#{},#{},#{},#{},#{});
+    </insert>
+
+    <update id="updateBlogger" parameterType="com.bdqn.pojo.Blogger">
+UPDATE `blogger`
+
+SET `bTypeId`= ,`bPostDate`=,`bTitle`=,`bContent`=,`bCommenterName`=,`bCommentContent`=,`bCommenterCount`=,`bPageView`=,`linkid`=,`fileUploadId`= WHERE bId=;
+    </update>
+
+    <delete id="delBlogger" parameterType="Integer">
+DELETE FROM `blogger` WHERE `bId`=#{bId}
+    </delete>-->
+</mapper>

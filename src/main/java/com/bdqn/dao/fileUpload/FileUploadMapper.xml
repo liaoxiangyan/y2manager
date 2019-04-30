@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.fileUpload.FileUploadMapper">
+    <!--查询全部信息-->
+    <select id="getFileUploadList" resultType="com.bdqn.pojo.FileUpload">
+        SELECT * FROM fileUpload;
+        <!--<trim suffix="where" suffixOverrides="and | or">
+    <if test="">
+    </if>
+</trim>-->
+    </select>
+
+<!--    <select id="getFileUploadByName" resultType="com.bdqn.pojo.FileUpload">
+
+    </select>
+
+    <insert id="addFileUpload" parameterType="com.bdqn.pojo.FileUpload">
+
+    </insert>
+
+    <update id="updateFileUpload" parameterType="com.bdqn.pojo.FileUpload">
+
+    </update>
+
+    <delete id="delFileUpload" parameterType="Integer">
+
+    </delete>-->
+</mapper>
