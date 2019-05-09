@@ -9,8 +9,5 @@
         <module name="blow" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="blow" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

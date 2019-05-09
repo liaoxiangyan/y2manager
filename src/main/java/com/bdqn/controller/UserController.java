@@ -15,10 +15,8 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/dologin.html")
-    public String doLogin(HttpSession session){
-        List<User> userList = userService.getUserList();
-        session.setAttribute("userList",userList);
-       return "first";
+    public String doLogin(){
+       return "view";
     }
 
 }
