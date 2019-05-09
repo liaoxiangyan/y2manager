@@ -17,26 +17,26 @@ public interface BloggerService {
      * @param name
      * @return
      */
-   // Blogger getBloggerByName(String name);
+    Blogger getBloggerByName(String name);
 
     /**
      * 新增
      * @param blogger
      * @return
      */
-  //  int addBlogger(Blogger blogger);
+   int addBlogger(Blogger blogger);
 
     /**
      * 删除
      * @param id
      * @return
      */
-   // int delBlogger(int id);
+    int delBlogger(int id);
 
     /**
      * 修改
      * @param blogger
      * @return
      */
-   // int updateBlogger(Blogger blogger);
+   int updateBlogger(Blogger blogger);
 }

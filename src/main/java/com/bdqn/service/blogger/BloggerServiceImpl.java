@@ -15,24 +15,24 @@ public class BloggerServiceImpl implements  BloggerService {
         return bloggerMapper.getBloggerList(blogger);
     }
 
- /*   @Override
+   @Override
     public Blogger getBloggerByName(String name) {
         return bloggerMapper.getBloggerByName(name);
-    }*/
+    }
 
-   /* @Override
+    @Override
     public int addBlogger(Blogger blogger) {
         return bloggerMapper.addBlogger(blogger);
-    }*/
+    }
 
-  /*  @Override
+   @Override
     public int delBlogger(int id) {
         return bloggerMapper.delBlogger(id);
-    }*/
+    }
 
-  /*  @Override
+   @Override
     public int updateBlogger(Blogger blogger) {
         return bloggerMapper.updateBlogger(blogger);
-    }*/
+    }
 
 }

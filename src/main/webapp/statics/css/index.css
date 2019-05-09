@@ -1,0 +1,23 @@
+#yinweiUL{
+	list-style-type:none;
+	text-align:center;
+}
+#yinweiLi{
+	float: left;
+}
+#moren{
+	width: 200px;
+	height: 300px;
+	padding:10px;
+}
+#huangdou{
+	width: 200px;
+	height: 300px;
+	padding:10px;
+}
+.choose{
+	cursor: pointer;
+}
+.yinweiSPAN{
+	font-size: 35px;
+}

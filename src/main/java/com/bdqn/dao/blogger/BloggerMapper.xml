@@ -9,28 +9,38 @@
         INNER JOIN bloggerType AS bt ON b.bId=bt.bTypeId
         INNER JOIN link AS l ON bt.bTypeId=l.linkid
         INNER JOIN fileUpload AS f ON l.linkid=f.fileUploadId
-<!--<trim suffix="where" suffixOverrides="and | or">
-    <if test="">
-    </if>
-</trim>-->
+        <!--<trim suffix="where" suffixOverrides="and | or">
+            <if test="">
+            </if>
+        </trim>-->
     </select>
-<!--
+
     <select id="getBloggerByName" resultType="com.bdqn.pojo.Blogger">
-SELECT * FROM `blogger` where Name=#{};
+SELECT * FROM `blogger` where bTitle=#{bTitle};
     </select>
 
     <insert id="addBlogger" parameterType="com.bdqn.pojo.Blogger">
-INSERT INTO `blogger`()
-VALUES(NULL,#{},#{},#{},#{},#{},#{},#{},#{},#{},#{});
+INSERT INTO `blogger`(bId,bTypeId,bPostDate,bTitle,bContent,bCommenterName,bCommentContent,bCommenterCount,bPageView,linkid,fileUploadId)
+VALUES(NULL,#{bTypeId},#{bPostDate},#{bTitle},#{bContent},#{bCommenterName},#{bCommentContent},#{bCommenterCount},#{bPageView},#{linkid},#{fileUploadId});
     </insert>
 
     <update id="updateBlogger" parameterType="com.bdqn.pojo.Blogger">
-UPDATE `blogger`
-
-SET `bTypeId`= ,`bPostDate`=,`bTitle`=,`bContent`=,`bCommenterName`=,`bCommentContent`=,`bCommenterCount`=,`bPageView`=,`linkid`=,`fileUploadId`= WHERE bId=;
+        UPDATE `blogger`
+        <trim prefix="set" suffixOverrides="," suffix=" where bId=#{bId}">
+            <if test="bTypeId">proCode=#{bTypeId},</if>
+            <if test="bPostDate">proName=#{bPostDate},</if>
+            <if test="bTitle">proDesc=#{bTitle},</if>
+            <if test="bContent">proContact=#{bContent},</if>
+            <if test="bCommenterName">proPhone=#{bCommenterName},</if>
+            <if test="bCommentContent">proAddress=#{bCommentContent},</if>
+            <if test="bCommenterCount">proFax=#{bCommenterCount},</if>
+            <if test="bPageView">createdBy=#{bPageView},</if>
+            <if test="linkid">creationDate=#{linkid},</if>
+            <if test="fileUploadId">modifyDate=#{fileUploadId},</if>
+        </trim>
     </update>
 
     <delete id="delBlogger" parameterType="Integer">
 DELETE FROM `blogger` WHERE `bId`=#{bId}
-    </delete>-->
+    </delete>
 </mapper>
