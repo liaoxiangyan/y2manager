@@ -60,13 +60,11 @@ $(function() {
 //					alert(cssSpanOne+"<==第一种"+cssSpanTwo+"《==第二种");
 					if(cssSpanOne == "red"){
 
-						alert("这是选中第一个模式");
 						$("input[name='temp']").val(1);
 
 						
 					}else if(cssSpanTwo == "red"){
 
-						alert("这是选中第二个模式");
 						$("input[name='temp']").val(2);
 						//$(".ywbiaoqian").css({"height":"10px","width":"10px"})
 						
