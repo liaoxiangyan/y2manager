@@ -75,7 +75,7 @@
 				<div id="ywDIVend">
 					
 		<ul id="yinweiULshow">
-				<li id="yinweiLishow">
+				<li class="yinweiLishow">
 					<div id="articleshow">
 						<div id="oneDIVshow">
 							<p class="onePshow">$</p>
@@ -101,7 +101,7 @@
 					<div style="clear: both;"></div>
 				</li>
 				
-				<li id="yinweiLishow" >
+				<li class="yinweiLishow" >
 					<div style="clear: both;"></div>
 					<div id="YINWEIfileshow">
 						<div id="fourDIVshow">
@@ -129,7 +129,7 @@
 		</ul>
 		</div>
 		<div id="articleDIVshow">
-						<span id="yinweiSPANshow">最新文章</span>
+						<span class="yinweiSPANshow">最新文章</span>
 						<ul id="yinweiULTWOshow">
 							<li class="OneLishow">
 								1&nbsp;&nbsp;&nbsp;&nbsp;<div id="yuanOneshow">8</div>
@@ -137,10 +137,10 @@
 						</ul>
 					</div>
 		<div id="ywDIVshow">
-						<span id="yinweiSPANshow">最新留言</span>
+						<span class="yinweiSPANshow">最新留言</span>
 						<ul id="ywULshow">
-							<li id="ywLiOneshow">
-								<span id="liuyanzheshow">这里写谁留言的</span>
+							<li class="ywLiOneshow">
+								<span class="liuyanzheshow">这里写谁留言的</span>
 								<br/>
 								1
 							</li>
@@ -149,8 +149,8 @@
 		<div id="ywDIVoneshow">
 						<span id="yinweiSPANshow">系统留言</span>
 						<ul id="ywULoneshow">
-							<li id="ywLiOneshow">
-								<span id="liuyanzheshow">这里写谁留言的</span>
+							<li class="ywLiOneshow">
+								<span class="liuyanzheshow">这里写谁留言的</span>
 								<br/>
 								1
 							</li>
