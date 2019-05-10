@@ -73,8 +73,9 @@
 					</ul>
 				</nav>
 			</div>
-					<div class="right">
-				<div class="Mydiv">
+			<div class="right">
+				<form method="post" action="/user/dologin.html">
+			<div class="Mydiv">
 			 <!--style="list-style-type:none;text-align:center;"-->
 			<ul id="yinweiUL">
 				<li class="yinweiLi">
@@ -82,17 +83,20 @@
 					<span class="myspanOne" class="yinweiSPAN">默认模式</span>
 				</li>
 				<li class="yinweiLi">
-					<img src="/statics/img/4.jpeg" title="黄豆模式" class="pic" id="huangdou"/><br/>
+					<img src="/statics/img/txt.png" title="黄豆模式" class="pic" id="huangdou"/><br/>
 					<span class="myspanTwo" class="yinweiSPAN">黄豆模式</span>
 				</li>
 			</ul>
 		</div>
 		<!-- style="cursor: hand;"(测试几种浮空鼠标显示)-->
 		<div>
-			<input type="button" value="确认按钮" name="choose" class="choose" id="choose">
+			<img src="/statics/img/${img[0]}">
+			<input type="text" value="${img[0]}" name="temp">
+			<input type="submit" value="确认按钮" name="choose" class="choose" id="choose">
 		</div>
-</div>
-		</div>
+			</form>
+			</div>
+	  </div>
 	</body>
 	<script type="text/javascript" src="/statics/js/jquery-1.8.3.min.js" ></script>
 	<script type="text/javascript" src="/statics/js/jquery-1.12.4.js" ></script>

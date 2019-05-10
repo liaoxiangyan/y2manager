@@ -1,5 +1,5 @@
 $(function() {
-				
+	// $("input[name='temp']").css("display","none");
 				$("input[name='choose']").css({
 					"width": "200px",
 					"height": "50px",
@@ -59,16 +59,20 @@ $(function() {
 //					two = String.trim(two);
 //					alert(cssSpanOne+"<==第一种"+cssSpanTwo+"《==第二种");
 					if(cssSpanOne == "red"){
-						
+
 						alert("这是选中第一个模式");
+						$("input[name='temp']").val(1);
+
 						
 					}else if(cssSpanTwo == "red"){
-						
+
 						alert("这是选中第二个模式");
+						$("input[name='temp']").val(2);
+
 						
 					}else{
 						
-						alert("这是没有选中模式");
+						alert("请选中模式后操作!");
 						
 					}
 					
