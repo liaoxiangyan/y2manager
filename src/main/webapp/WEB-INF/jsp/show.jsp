@@ -60,7 +60,7 @@
 							<a href="#"><img src="/statics/img/chart_pie.png" />&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
+							<a href="/user/userfile.html"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
 						</li>
 						<li>
 							<a href="link.jsp"><img src="/statics/img/tag_blue.png" />&nbsp;友链管理</a>

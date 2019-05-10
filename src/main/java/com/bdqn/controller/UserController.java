@@ -18,8 +18,11 @@ public class UserController {
 
     @RequestMapping("/userview.html")
     public String doView(){
-        return "view";
+        return "system";
     }
+
+    @RequestMapping("/userfile.html")
+    public String doFile(){ return "show";}
 
     @RequestMapping("/dologin.html")
     public String doLogin(HttpSession session,
