@@ -17,6 +17,11 @@ public class BloggerTypeServiceImpl  implements  BloggerTypeService{
         return bloggerTypeMapper.getBloggerTypeList();
     }
 
+    @Override
+    public BloggerType getBloggerTypeById(Integer bTypeId) {
+        return bloggerTypeMapper.getBloggerTypeById(bTypeId);
+    }
+
 
    /* @Override
     public Blogger getBloggerTypeByName(String name) {

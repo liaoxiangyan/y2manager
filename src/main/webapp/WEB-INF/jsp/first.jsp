@@ -36,24 +36,27 @@
     </div>
     <form action="" method="post">
         <div class="group">
-            <input class="inputMaterial" type="text" id="login_code" name="login_code" required>
+            <input class="inputMaterial" type="text" class="login_code" name="login_code" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Username</label>
 
         </div>
         <div class="group">
-            <input class="inputMaterial" type="password"  name="login_code" required>
+            <input class="inputMaterial" type="password" class="login_code" name="login_code" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Password</label>
         </div>
         <div class="xingkul">
-            <input id="saveid" type="checkbox"/>
+            <input class="saveid" type="checkbox" />
         </div>
         <div class="xingku">
             <font onclick="">记住密码</font>
-        </div>-
+        </div>
+        <div class="xingkul">
+            <input class="saveid" type="checkbox" />
+        </div>
         <div class="xingku">
             <font>自动登录</font>
         </div>
@@ -92,7 +95,7 @@
                     <a href="addBlow.jsp"><img src="/statics/img/book_edit.png"/>&nbsp;发表博客</a>
                 </li>
                 <li>
-                    <a href="myBlow.jsp"><img src="/statics/img/book.png"/>&nbsp;博客管理</a>
+                    <a href="/blogger/bloggerlist.html"><img src="/statics/img/book.png"/>&nbsp;博客管理</a>
                 </li>
                 <li>
                     <a href="view.jsp"><img src="/statics/img/color_wheel.png"/>&nbsp;页面管理</a>

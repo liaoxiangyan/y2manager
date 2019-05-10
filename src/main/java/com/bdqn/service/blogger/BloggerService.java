@@ -7,10 +7,10 @@ import java.util.List;
 public interface BloggerService {
     /**
      * 获取全部信息
-     * @param blogger
+     * @param
      * @return
      */
-    List<Blogger> getBloggerList(Blogger blogger);
+    List<Blogger> getBloggerList();
 
     /**
      * 根据名字获取

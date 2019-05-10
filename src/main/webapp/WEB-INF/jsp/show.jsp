@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="/statics/css/public.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/show.css" />
 		<link rel="stylesheet" href="css/system.css" />
