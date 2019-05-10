@@ -4,15 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bdqn.dao.blogger.BloggerMapper">
     <!--查询全部信息-->
-    <select id="getBloggerList" resultType="com.bdqn.pojo.Blogger" parameterType="com.bdqn.pojo.Blogger">
+    <select id="getBloggerList" resultType="com.bdqn.pojo.Blogger">
         SELECT * FROM blogger AS b
-        INNER JOIN bloggerType AS bt ON b.bId=bt.bTypeId
-        INNER JOIN link AS l ON bt.bTypeId=l.linkid
-        INNER JOIN fileUpload AS f ON l.linkid=f.fileUploadId
-        <!--<trim suffix="where" suffixOverrides="and | or">
-            <if test="">
-            </if>
-        </trim>-->
+        INNER JOIN bloggerType AS bt ON b.bTypeId=bt.bTypeId
+        INNER JOIN link AS l ON b.linkid=l.linkid
+        INNER JOIN fileUpload AS f ON b.fileUploadId=f.fileUploadId
     </select>
 
     <select id="getBloggerByName" resultType="com.bdqn.pojo.Blogger">

@@ -6,7 +6,7 @@ package com.bdqn.pojo;
 public class BloggerType {
     private  Integer bTypeId;//博客类别id
     private  String bCreateTime;//博客创建时间
-    private  String bCreateName;//博主
+    private  String bCreateName;//博客类别
     private  String bModifyTime;//博客更新时间
 
     public Integer getbTypeId() {
