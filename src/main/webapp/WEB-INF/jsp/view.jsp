@@ -44,31 +44,31 @@
 				<nav>
 					<ul class="list">
 						<li>
-							<a href="system.jsp"><img src="/statics/img/user.png" />&nbsp;用户管理</a>
+							<a href="system.jsp"><img src="/statics/img/${img[0]}" class="ywbiaoqian"/>&nbsp;用户管理</a>
 						</li>
 						<li>
-							<a href="addBlow.jsp"><img src="/statics/img/book_edit.png" /> &nbsp;发表博客</a>
+							<a href="addBlow.jsp"><img src="/statics/img/${img[1]}" class="ywbiaoqian"/> &nbsp;发表博客</a>
 						</li>
 						<li>
-							<a href="myBlow.jsp"><img src="/statics/img/book.png" />&nbsp;博客管理</a>
+							<a href="myBlow.jsp"><img src="/statics/img/${img[2]}" class="ywbiaoqian"/>&nbsp;博客管理</a>
 						</li>
 						<li>
-							<a href="view.jsp"><img src="/statics/img/color_wheel.png" />&nbsp;页面管理</a>
+							<a href="view.jsp"><img src="/statics/img/${img[3]}" class="ywbiaoqian"/>&nbsp;页面管理</a>
 						</li>
 						<li>
-							<a href="comment.jsp"><img src="/statics/img/script_edit.png" />&nbsp;评论管理</a>
+							<a href="comment.jsp"><img src="/statics/img/${img[4]}" class="ywbiaoqian"/>&nbsp;评论管理</a>
 						</li>
 						<li>
-							<a href="#"><img src="/statics/img/chart_pie.png" />&nbsp;分类标签</a>
+							<a href="#"><img src="/statics/img/${img[5]}" class="ywbiaoqian"/>&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
+							<a href="show.jsp"><img src="/statics/img/${img[6]}" class="ywbiaoqian"/>&nbsp;文件管理</a>
 						</li>
 						<li>
-							<a href="link.jsp"><img src="/statics/img/tag_blue.png" />&nbsp;友链管理</a>
+							<a href="link.jsp"><img src="/statics/img/${img[7]}" class="ywbiaoqian"/>&nbsp;友链管理</a>
 						</li>
 						<li>
-							<a href=""><img src="/statics/img/wrench.png" />&nbsp;系统设置</a>
+							<a href=""><img src="/statics/img/${img[8]}" class="ywbiaoqian"/>&nbsp;系统设置</a>
 						</li>
 					</ul>
 				</nav>
@@ -90,7 +90,7 @@
 		</div>
 		<!-- style="cursor: hand;"(测试几种浮空鼠标显示)-->
 		<div>
-			<img src="/statics/img/${img[0]}">
+			<%--<img src="/statics/img/${img[0]}" class="ywbiaoqian">--%>
 			<input type="text" value="${img[0]}" name="temp">
 			<input type="submit" value="确认按钮" name="choose" class="choose" id="choose">
 		</div>
