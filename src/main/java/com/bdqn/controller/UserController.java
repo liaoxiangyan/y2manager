@@ -24,11 +24,12 @@ public class UserController {
     @RequestMapping("/dologin.html")
     public String doLogin(HttpSession session,
                           @RequestParam(value = "temp",required = false) String temp){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        String[] imgss = {"imgtp/confused.ico","imgtp/cool.ico","imgtp/cry.ico","imgtp/fire.ico","imgtp/grimace.ico","imgtp/miao.ico","imgtp/prettiness.ico","imgtp/question.ico","imgtp/shout.ico"};
+        session.setAttribute("img",imgs);
         if(temp!=null){
-            String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
-            String[] imgss = {"imgtp/confused.ico","imgtp/cool.ico","imgtp/cry.ico","imgtp/fire.ico","imgtp/grimace.ico","imgtp/miao.ico","imgtp/prettiness.ico","imgtp/question.ico","imgtp/shout.ico"};
+
             if(temp.equals("1")||temp=="1"){
-                session.setAttribute("img",imgs);
 
             }else {
                 session.setAttribute("img",imgss);

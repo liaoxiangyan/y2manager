@@ -111,3 +111,12 @@ input[value="查询"] {
 	height: 50px;
 	resize: none;
 }
+.ywbiaoqian{
+	width: 18px;
+	height: 18px;
+}
+#choose{
+	position: absolute;
+	left: 1000px;
+	top: 700px;
+}

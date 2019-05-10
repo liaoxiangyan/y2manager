@@ -1,5 +1,5 @@
 $(function() {
-	// $("input[name='temp']").css("display","none");
+	$("input[name='temp']").css("display","none");
 				$("input[name='choose']").css({
 					"width": "200px",
 					"height": "50px",
@@ -68,7 +68,7 @@ $(function() {
 
 						alert("这是选中第二个模式");
 						$("input[name='temp']").val(2);
-
+						//$(".ywbiaoqian").css({"height":"10px","width":"10px"})
 						
 					}else{
 						
