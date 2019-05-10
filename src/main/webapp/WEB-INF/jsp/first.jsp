@@ -136,7 +136,7 @@
         </div>
         <div id="center">
             <dl>
-                <dt>最新博客</dt>
+                <dt>最新博主</dt>
                 <dd>1</dd>
                 <dd>2</dd>
                 <dd>3</dd>

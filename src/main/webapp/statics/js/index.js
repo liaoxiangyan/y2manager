@@ -18,7 +18,6 @@ $(function() {
 				})
 				$w = $('.pic').width();
 				$h = $('.pic').height();
-				alert($w+"<==="+$h+"<===")
 				$w2 = $w + 20;
 				$h2 = $h + 20;
 

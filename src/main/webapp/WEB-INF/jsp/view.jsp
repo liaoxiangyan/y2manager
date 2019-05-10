@@ -5,18 +5,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/public.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="css/show.css" />
-		<link rel="stylesheet" href="css/system.css" />
+		<link rel="stylesheet" href="/statics/css/style.css" />
+		<link rel="stylesheet" href="/statics/css/public.css" />
+		<link rel="stylesheet" href="/statics/css/index.css" />
+		<link rel="stylesheet" href="/statics/css/show.css" />
+		<link rel="stylesheet" href="/statics/css/system.css" />
 		
 	</head>
 	<body>
 			<header class="adver">
 		</header>
 		<div class="publicHeader">
-			<img src="img/panel_loading.1.5.4.gif"/><h1>个人博客系统</h1>
+			<img src="/statics/img/panel_loading.1.5.4.gif"/><h1>个人博客系统</h1>
 			<div class="publicHeaderR">
 				<a href="">首页</a>
 				<a href="denlu.jsp">登录</a>
@@ -44,31 +44,31 @@
 				<nav>
 					<ul class="list">
 						<li>
-							<a href="system.jsp"><img src="img/user.png" />&nbsp;用户管理</a>
+							<a href="system.jsp"><img src="/statics/img/user.png" />&nbsp;用户管理</a>
 						</li>
 						<li>
-							<a href="addBlow.jsp"><img src="img/book_edit.png" /> &nbsp;发表博客</a>
+							<a href="addBlow.jsp"><img src="/statics/img/book_edit.png" /> &nbsp;发表博客</a>
 						</li>
 						<li>
-							<a href="myBlow.jsp"><img src="img/book.png" />&nbsp;博客管理</a>
+							<a href="myBlow.jsp"><img src="/statics/img/book.png" />&nbsp;博客管理</a>
 						</li>
 						<li>
-							<a href="view.jsp"><img src="img/color_wheel.png" />&nbsp;页面管理</a>
+							<a href="view.jsp"><img src="/statics/img/color_wheel.png" />&nbsp;页面管理</a>
 						</li>
 						<li>
-							<a href="comment.jsp"><img src="img/script_edit.png" />&nbsp;评论管理</a>
+							<a href="comment.jsp"><img src="/statics/img/script_edit.png" />&nbsp;评论管理</a>
 						</li>
 						<li>
-							<a href="#"><img src="img/chart_pie.png" />&nbsp;分类标签</a>
+							<a href="#"><img src="/statics/img/chart_pie.png" />&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="img/folder_go.png" />&nbsp;文件管理</a>
+							<a href="show.jsp"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
 						</li>
 						<li>
-							<a href="link.jsp"><img src="img/tag_blue.png" />&nbsp;友链管理</a>
+							<a href="link.jsp"><img src="/statics/img/tag_blue.png" />&nbsp;友链管理</a>
 						</li>
 						<li>
-							<a href=""><img src="img/wrench.png" />&nbsp;系统设置</a>
+							<a href=""><img src="/statics/img/wrench.png" />&nbsp;系统设置</a>
 						</li>
 					</ul>
 				</nav>
@@ -77,12 +77,12 @@
 				<div class="Mydiv">
 			 <!--style="list-style-type:none;text-align:center;"-->
 			<ul id="yinweiUL">
-				<li id="yinweiLi">
-					<img src="img/3.jpeg" title="默认模式" class="pic" id="moren"/><br/>
+				<li class="yinweiLi">
+					<img src="/statics/img/3.jpeg" title="默认模式" class="pic" id="moren"/><br/>
 					<span class="myspanOne" class="yinweiSPAN">默认模式</span>
 				</li>
-				<li id="yinweiLi">
-					<img src="img/4.jpeg" title="黄豆模式" class="pic" id="huangdou"/><br/>
+				<li class="yinweiLi">
+					<img src="/statics/img/4.jpeg" title="黄豆模式" class="pic" id="huangdou"/><br/>
 					<span class="myspanTwo" class="yinweiSPAN">黄豆模式</span>
 				</li>
 			</ul>
@@ -92,9 +92,10 @@
 			<input type="button" value="确认按钮" name="choose" class="choose" id="choose">
 		</div>
 </div>
+		</div>
 	</body>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
-	<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
-	<script type="text/javascript" src="js/index.js" ></script>
-	<script type="text/javascript" src="js/system.js" ></script>
+	<script type="text/javascript" src="/statics/js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="/statics/js/jquery-1.12.4.js" ></script>
+	<script type="text/javascript" src="/statics/js/index.js" ></script>
+	<script type="text/javascript" src="/statics/js/system.js" ></script>
 </html>
