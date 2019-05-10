@@ -11,8 +11,8 @@ public class BloggerServiceImpl implements  BloggerService {
     @Resource
     private BloggerMapper bloggerMapper;
     @Override
-    public List<Blogger> getBloggerList(Blogger blogger) {
-        return bloggerMapper.getBloggerList(blogger);
+    public List<Blogger> getBloggerList() {
+        return bloggerMapper.getBloggerList();
     }
 
    @Override

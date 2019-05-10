@@ -12,6 +12,9 @@
 </trim>-->
     </select>
 
+    <select id="getBloggerType" resultType="com.bdqn.pojo.BloggerType">
+        select * from bloggertype where bTypeId=#{bTypeId};
+    </select>
  <!--   <select id="getBloggerTypeByName" resultType="com.bdqn.pojo.BloggerType">
 
     </select>

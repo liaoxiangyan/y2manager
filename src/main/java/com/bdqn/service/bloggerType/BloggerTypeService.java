@@ -13,6 +13,13 @@ public interface BloggerTypeService {
      */
     List<BloggerType> getBloggerTypeList();
 
+    /*
+     *根据id获取对象
+     * @param bTypeId
+     * @return
+     */
+    BloggerType getBloggerTypeById(Integer bTypeId);
+
     /**
      * 根据名字获取
      * @param name
