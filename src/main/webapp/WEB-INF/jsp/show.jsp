@@ -160,4 +160,5 @@
 			</div>
 			<footer id="footer">版权所有，请尽情盗版</footer>
 	</body>
+	<script type="text/javascript" src="/statics/js/lunboutu.js" ></script>
 </html>
