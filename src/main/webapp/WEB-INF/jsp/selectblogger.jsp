@@ -6,14 +6,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>查看博客</title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="/statics/css/style.css" />
+		<link rel="stylesheet" href="/statics/css/public.css" />
 	</head>
 
 	<body>
 		<header class="adver">
 		</header>
-		<div class="publicHeader"><img src="img/panel_loading.1.5.4.gif" />
+		<div class="publicHeader"><img src="/statics/img/panel_loading.1.5.4.gif" />
 			<h1>个人博客系统</h1>
 			<div class="publicHeaderR">
 				<a href="">首页</a>
@@ -41,38 +41,41 @@
 				<nav>
 					<ul class="list">
 						<li>
-							<a href="system.jsp"><img src="img/user.png" />&nbsp;用户管理</a>
+							<a href="system.jsp"><img src="/statics/img/user.png" />&nbsp;用户管理</a>
 						</li>
 						<li>
-							<a href="addBlow.jsp"><img src="img/book_edit.png" /> &nbsp;发表博客</a>
+							<a href="addBlow.jsp"><img src="/statics/img/book_edit.png" /> &nbsp;发表博客</a>
 						</li>
 						<li>
-							<a href="myBlow.jsp"><img src="img/book.png" />&nbsp;博客管理</a>
+							<a href="myBlow.jsp"><img src="/statics/img/book.png" />&nbsp;博客管理</a>
 						</li>
 						<li>
-							<a href="view.jsp"><img src="img/color_wheel.png" />&nbsp;页面管理</a>
+							<a href="view.jsp"><img src="/statics/img/color_wheel.png" />&nbsp;页面管理</a>
 						</li>
 						<li>
-							<a href="comment.jsp"><img src="img/script_edit.png" />&nbsp;评论管理</a>
+							<a href="comment.jsp"><img src="/statics/img/script_edit.png" />&nbsp;评论管理</a>
 						</li>
 						<li>
-							<a href="#"><img src="img/chart_pie.png" />&nbsp;分类标签</a>
+							<a href="#"><img src="/statics/img/chart_pie.png" />&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="img/folder_go.png" />&nbsp;文件管理</a>
+							<a href="show.jsp"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
 						</li>
 						<li>
-							<a href="link.jsp"><img src="img/tag_blue.png" />&nbsp;友链管理</a>
+							<a href="link.jsp"><img src="/statics/img/tag_blue.png" />&nbsp;友链管理</a>
 						</li>
 						<li>
-							<a href=""><img src="img/wrench.png" />&nbsp;系统设置</a>
+							<a href=""><img src="/statics/img/wrench.png" />&nbsp;系统设置</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 				<div class="right" id="rightblogger">
+					<c:forEach items="${bloggerList}" var="li">
+
+					</c:forEach>
 					<dl>
-						<dt>博客标题:${}</dt>
+						<dt>博客标题:${li.}</dt>
 						<dd>博主:${}</dd>
 						<dd>博客内容:${}</dd>
 						<dd>博客类别:${} 预览次数:${} 发表时间:${}</dd>

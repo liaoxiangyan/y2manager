@@ -22,7 +22,7 @@
 	float: right;
 }
 
-#serchcontent {
+.serchcontent {
 	height: 40px;
 	line-height: 40px;
 	font-size: 16px;

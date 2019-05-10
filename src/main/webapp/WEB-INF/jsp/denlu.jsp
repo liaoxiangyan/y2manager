@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>登录页面</title>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="/statics/css/login.css"/>
 		<script type="text/javascript">
 		      function setCookie(){ //设置cookie    
                 var loginCode = $("#login_code").val(); //获取用户名信息    
@@ -21,26 +21,26 @@
     </div>
     <form action="" method="post">
         <div class="group">
-            <input class="inputMaterial" type="text" id="login_code" name="login_code" required>
+            <input class="inputMaterial" type="text" class="login_code" name="login_code" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Username</label>
 
         </div>
         <div class="group">
-            <input class="inputMaterial" type="password"  id="login_code" name="login_code" required>
+            <input class="inputMaterial" type="password"  class="login_code" name="login_code" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Password</label>
         </div>
           <div class="xingkul">
-                 <input id="saveid" type="checkbox" />
+                 <input class="saveid" type="checkbox" />
                  </div>
 		 	    <div class="xingku">
                 <font onclick="">记住密码</font>
                  </div>
                  <div class="xingkul">
-                 <input id="saveid" type="checkbox" />
+                 <input class="saveid" type="checkbox" />
                  </div>
 		 	    <div class="xingku">
                 <font>自动登录</font>
