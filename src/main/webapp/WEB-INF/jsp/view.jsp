@@ -62,7 +62,7 @@
 							<a href="#"><img src="/statics/img/${img[5]}" class="ywbiaoqian"/>&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="/statics/img/${img[6]}" class="ywbiaoqian"/>&nbsp;文件管理</a>
+							<a href="/user/userfile.html"><img src="/statics/img/${img[6]}" class="ywbiaoqian"/>&nbsp;文件管理</a>
 						</li>
 						<li>
 							<a href="link.jsp"><img src="/statics/img/${img[7]}" class="ywbiaoqian"/>&nbsp;友链管理</a>
