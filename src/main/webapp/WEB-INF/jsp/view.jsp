@@ -62,7 +62,7 @@
 							<a href="#"><img src="/statics/img/${img[5]}" class = "ywIMG"/>&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="/user/userfile.html"><img src="/statics/img/${img[6]}" class = "ywIMG"/>&nbsp;文件管理</a>
+							<a href="/user/usersystem1.html"><img src="/statics/img/${img[6]}" class = "ywIMG"/>&nbsp;文件管理</a>
 						</li>
 					</ul>
 				</nav>
