@@ -1,4 +1,6 @@
 $(function(){
+
+	$("input[name='chooseYW']").css("display","none");
 			    $w = $('.picsystem').width();
 				$h = $('.picsystem').height();
 				$w2 = $w + 20;
@@ -24,12 +26,16 @@ $(function(){
 					$("#ywImgTwosystem").css({"border":"solid 5px white"});
 					$(".myspanTwosystem").css({"font-family":"华文中宋","color":"black"});
 					$(".myspanOnesystem").css({"font-family":"华文中宋","color":"red"});
+					var temp = $(".myspanOnesystem").html();
+					$("input[name='chooseYW']").val(temp);
 				})
 				$("#ywImgTwosystem").click(function(){
 					$("#ywImgsystem").css({"border":"solid 5px white"});
 					$("#ywImgTwosystem").css({"border":"solid 5px red"});
 					$(".myspanTwosystem").css({"font-family":"华文中宋","color":"red"});
 					$(".myspanOnesystem").css({"font-family":"华文中宋","color":"black"});
+					var temp = $(".myspanTwosystem").html();
+					$("input[name='chooseYW']").val(temp);
 				})
 			//确认按钮美化
 			$(".ok").css({
@@ -47,6 +53,22 @@ $(function(){
 					$(".ok").css("background", "red");
 				}, function() {
 					$(".ok").css("background", "#1E90FF");
+				})
+				$(".okTWO").css({
+					"width": "100px",
+					"height": "25px",
+					"border-width": "0px",
+					"border-radius": "3px",
+					"background": "#1E90FF",
+					"outline": "none",
+					"font-family": "Microsoft YaHei",
+					"color": "white",
+					"font-size": "17px"
+				});
+				$(".okTWO").hover(function() {
+					$(".okTWO").css("background", "red");
+				}, function() {
+					$(".okTWO").css("background", "#1E90FF");
 				})
 			$(".myspansystem").css({
 				    "width": "100px",
