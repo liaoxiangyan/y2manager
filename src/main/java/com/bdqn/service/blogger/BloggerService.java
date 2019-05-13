@@ -55,4 +55,6 @@ public interface BloggerService {
      */
     int delBlogger(Integer bId);
 
+    int updatefileUploadName(String fileUploadName,int id);
+
 }

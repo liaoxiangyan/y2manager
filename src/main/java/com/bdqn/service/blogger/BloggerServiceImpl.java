@@ -41,4 +41,9 @@ public class BloggerServiceImpl implements  BloggerService {
     public int delBlogger(Integer bId) {
         return bloggerMapper.delBlogger(bId);
     }
+
+    @Override
+    public int updatefileUploadName(String fileUploadName, int id) {
+        return bloggerMapper.updatefileUploadName(fileUploadName,id);
+    }
 }

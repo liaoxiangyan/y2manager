@@ -1,6 +1,8 @@
 package com.bdqn.controller;
 
+import com.bdqn.pojo.Blogger;
 import com.bdqn.pojo.User;
+import com.bdqn.service.blogger.BloggerService;
 import com.bdqn.service.user.UserService;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,10 @@ import java.util.Random;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @Resource
+    private BloggerService bloggerService;
+
     @Resource(name = "userService")
     private UserService userService;
 
@@ -49,7 +55,7 @@ public class UserController {
         return "view";
     }
 
-    public boolean show(String choose,String file) {
+    public boolean addFile(String choose,String file) {
         FileInputStream fis = null;
 
         FileOutputStream os = null;
@@ -61,7 +67,7 @@ public class UserController {
 
         try {
             // 把文件路径和文件名作为参数 告诉读取流
-            fis = new FileInputStream("F:/flie/src/main/webapp/SystemFlie/" + file);
+            fis = new FileInputStream("F:/blow/src/main/webapp/SystemFlie/" + file);
 
             // 把文件读取流对象传递给缓存读取流对象
             bis = new BufferedInputStream(fis);
@@ -97,7 +103,7 @@ public class UserController {
     }
     @RequestMapping("/fileAll.html")
     public String showAllfile(HttpSession session){
-        String path = "F:/flie/src/main/webapp/SystemFlie"; // 路径
+        String path = "F:/blow/src/main/webapp/SystemFlie"; // 路径
         File f = new File(path);
         if (!f.exists()) {
             System.out.println(path + " not exists");
@@ -134,62 +140,18 @@ public class UserController {
     public String showOne(@RequestParam(value = "lujin",required = false) String lujin
             ,@RequestParam(value = "chooseYW",required = false) String chooseYW){
 
-
+        System.out.println(chooseYW+"<======文件名"+lujin);
         if(lujin != null){
             if(chooseYW != null){
-                show(lujin,chooseYW);
+                if(addFile(lujin,chooseYW)){
+                    System.out.println("成功《============================");
+                }else{
+                    System.out.println("失败《============================");
+                }
             }
         }
         return "first";
     }
 
-//    @RequestMapping(value = "/flie.html", method = RequestMethod.POST)
-//    public String show(Flie flie, HttpSession session, @RequestParam(value = "attr", required = false) MultipartFile attr) {
-//        //保存到数据库
-//        String idPicPath = null;
-//        //解决字符乱码问题
-//        String fileName = null;
-//        if (!attr.isEmpty()) {
-//            //String filePath = session.getServletContext().getRealPath("statics" + File.separator)
-//            //上传同时 保存文件
-//            String fileOne = "F:\\flie\\src\\main\\webapp\\SystemFlie";
-//
-//            String fileOldName = attr.getOriginalFilename();
-//            String sufix = FilenameUtils.getExtension(fileOldName);
-//            List<String> sufixs = Arrays.asList(new String[]{"jpg", "png", "jpeg", "pneg","txt","JPG", "PNG", "JQEG", "PNEG","TXT"});
-//            if (attr.getSize() > 5000000) {
-//                session.setAttribute("uploadFileError", "文件太大了");
-//                return "jsp/lost";
-//            } else if (sufixs.contains(sufix)) {
-//                //重新命名，目的就是解决重名和字符乱码问题
-//                fileName = System.currentTimeMillis() + new Random().nextInt(50000000) + "_person." + sufix;
-//                File file = new File(fileOne, fileName);
-//                if (!file.exists()) {
-//                    file.mkdirs();
-//                }
-//                try {
-//                    attr.transferTo(file);
-//
-//                } catch (Exception e) {
-//                    e.printStackTrace(
-//
-//                    );
-//                    session.setAttribute("uploadFileError", "上传失败");
-//                    return "useradd";
-//                }
-//                idPicPath = fileOne + File.separator + fileName;
-//                //idPicPath = fileName;
-//            } else {
-//                session.setAttribute("uploadFileError", "文件格式不对");
-//                return "useradd";
-//            }
-//        }
-//        System.out.println("下面进入添加数据库《==============================================");
-//        flie.setFlie(idPicPath);
-//        if (flieService.add(flie)) {
-//            System.out.println("添加成功《==============================================");
-//            return "jsp/win";
-//        }
-//        return "jsp/lost";
-//    }
+
 }

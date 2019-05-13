@@ -1,6 +1,7 @@
 package com.bdqn.dao.blogger;
 
 import com.bdqn.pojo.Blogger;
+import org.apache.ibatis.annotations.Param;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
@@ -37,6 +38,14 @@ public interface BloggerMapper {
      * @return
      */
     int addBlogger(Blogger blogger);
+
+    /**
+     * 新增文件
+     *
+     * @param
+     * @return
+     */
+    int updatefileUploadName(@Param("fileUploadName")String fileUploadName,@Param("id")int id);
 
 
     /**

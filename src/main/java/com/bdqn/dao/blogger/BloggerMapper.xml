@@ -46,4 +46,8 @@
     <delete id="delBlogger" parameterType="Integer">
             DELETE FROM `blogger` WHERE `bId`=#{bId}
     </delete>
+
+    <update id="updatefileUploadName">
+        UPDATE `blogger`set `blogger`.fileUploadName=#{fileUploadName} where `blogger`.bId = #{id}
+    </update>
 </mapper>

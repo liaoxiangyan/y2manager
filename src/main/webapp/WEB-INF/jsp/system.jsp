@@ -169,19 +169,20 @@
 		                                       <input type="text" class="lujin" name="lujin"/>
 		                                       <input type="submit" value="确认按钮" class="ok"/>
 		                                   </div>
-                                          <div id="fileDIVYW">
-                                              <form id="userForm" name="userForm" method="post" action="/user/flie.html" enctype="multipart/form-data">
-                                                  <div>
-                                                      <label for="attr">文件：</label>
-                                                      <input type="file" name="attr" id="attr" width="200px" height="200px">
-                                                      <font color="red"></font>
-                                                  </div>
-                                                  <input type="submit" value="提交" class="okTWO">
-                                              </form>
-                                          </div>
+
 			                           </ul>
 		                               </div>
                                   </form>
+						<div id="fileDIVYW">
+							<form id="userForm" name="userForm" method="post" action="/blogger/flie.html" enctype="multipart/form-data">
+								<div>
+									<label for="attr">文件：</label>
+									<input type="file" name="attr" id="attr" width="200px" height="200px">
+									<font color="red"></font>
+								</div>
+								<input type="submit" value="提交" class="okTWO">
+							</form>
+						</div>
 
 		</div>
 		</div>

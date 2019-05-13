@@ -79,17 +79,19 @@ $(function(){
 					"font-size": "27px"
 			})
 				
-			$(".ok").click(function(){
+			$(".ok").submit(function(){
 				var choose = /^[c-fC-F]:\\.*$/;
 		        var temp = $("input[name = 'lujin']").val();
 				//测试
-				//alert(temp+"<=======");
+				alert(temp+"<=======");
 				if(temp==null||temp==""){
 					alert("判断为空");
+					return false;
 				}else if(!choose.test(temp)){
-					alert("如果进来，表示确认失败");
+					alert("路径错误");
+					return false;
 				}else{
-					alert("如果进来，表示确认成功");
+					return true;
 				}
 			})
 		})
