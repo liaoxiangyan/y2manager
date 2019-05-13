@@ -139,7 +139,7 @@
 							<a href="#"><img src="/statics/img/chart_pie.png" />&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
+							<a href="/user/fileAll.html"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
 						</li>
 						<li>
 							<a href="link.jsp"><img src="/statics/img/tag_blue.png" />&nbsp;友链管理</a>
@@ -151,23 +151,38 @@
 				</nav>
 			</div>
 					<div class="right">
-		<div class="Mydivsystem">
-			<ul id="ywUlsystem">
-				<li class="ywlisystem">
-					<img id="ywImgsystem" src="/statics/img/1.jpeg" title="默认模式" class="picsystem"/><br/>
-					<span class="myspanOnesystem">文件名</span>
-				</li>
-				<li class="ywlisystem">
-					<img id="ywImgTwosystem" src="/statics/img/2.jpeg" title="黄豆模式" class="picsystem"/><br/>
-					<span class="myspanTwosystem">文件名</span>
-				</li>
-				<div id="myDivsystem">
-					<span class="myspansystem">文件上传路径</span>
-		            <input type="text" class="lujin" name="lujin"/>
-		            <input type="button" value="确认按钮" class="ok"/>
-		        </div>
-			</ul>
-		</div>
+                        <form action="/user/system.html" method="post">
+		                        <div class="Mydivsystem">
+			                          <ul id="ywUlsystem">
+
+				                           <li class="ywlisystem">
+					                           <img id="ywImgsystem" src="/statics/img/1.jpeg" title="${ywFileFrist}" class="picsystem"/><br/>
+					                           <span class="myspanOnesystem">${ywFileFrist}</span>
+				                           </li>
+				                           <li class="ywlisystem">
+					                           <img id="ywImgTwosystem" src="/statics/img/2.jpeg" title="${ywFileEnd}" class="picsystem"/><br/>
+					                           <span class="myspanTwosystem">${ywFileEnd}</span>
+				                           </li>
+				                           <div id="myDivsystem">
+                                               <input type="text" name="chooseYW" class="chooseYW">
+					                           <span class="myspansystem">文件上传路径</span>
+		                                       <input type="text" class="lujin" name="lujin"/>
+		                                       <input type="submit" value="确认按钮" class="ok"/>
+		                                   </div>
+                                          <div id="fileDIVYW">
+                                              <form id="userForm" name="userForm" method="post" action="/user/flie.html" enctype="multipart/form-data">
+                                                  <div>
+                                                      <label for="attr">文件：</label>
+                                                      <input type="file" name="attr" id="attr" width="200px" height="200px">
+                                                      <font color="red"></font>
+                                                  </div>
+                                                  <input type="submit" value="提交" class="okTWO">
+                                              </form>
+                                          </div>
+			                           </ul>
+		                               </div>
+                                  </form>
+
 		</div>
 		</div>
 	</body>

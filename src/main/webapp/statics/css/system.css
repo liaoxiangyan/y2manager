@@ -9,10 +9,10 @@
 	width: 200px;height: 300px;padding:10px
 }
 .myspanOnesystem{
-	font-size: 25px;
+	font-size: 13px;
 }
 .myspanTwosystem{
-	font-size: 25px;
+	font-size: 13px;
 }
 #ywImgTwosystem{
 	width: 200px;height: 300px;padding:10px
@@ -25,4 +25,10 @@
 .myspansystem{
 	font-family: 楷体;
 	font-weight:bold ;
+}
+#fileDIVYW{
+    position: absolute;
+    float: left;
+    margin-left: 500px;
+    margin-top:50px;
 }
