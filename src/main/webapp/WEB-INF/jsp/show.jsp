@@ -5,16 +5,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/public.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="css/show.css" />
-		<link rel="stylesheet" href="css/system.css" />
+		<link rel="stylesheet" href="/statics/css/style.css" />
+		<link rel="stylesheet" href="/statics/css/public.css" />
+		<link rel="stylesheet" href="/statics/css/index.css" />
+		<link rel="stylesheet" href="/statics/css/show.css" />
+		<link rel="stylesheet" href="/statics/css/system.css" />
 	</head>
 	<body>
 		<header class="adver">
 		</header>
-		<div class="publicHeader"><img src="img/panel_loading.1.5.4.gif" />
+		<div class="publicHeader"><img src="/statics/img/panel_loading.1.5.4.gif" />
 			<h1>个人博客系统</h1>
 			<div class="publicHeaderR">
 				<a href="">首页</a>
@@ -42,35 +42,25 @@
 				<nav>
 					<ul class="list">
 						<li>
-							<a href="system.jsp"><img src="img/user.png" />&nbsp;用户管理</a>
+							<a href="/user/usershow.html"><img src="/statics/img/${img[0]}" />&nbsp;用户管理</a>
 						</li>
 						<li>
-							<a href="addBlow.jsp"><img src="img/book_edit.png" /> &nbsp;发表博客</a>
+							<a href="/user/useraddBlow.html"><img src="/statics/img/${img[1]}" /> &nbsp;发表博客</a>
 						</li>
 						<li>
-							<a href="myBlow.jsp"><img src="img/book.png" />&nbsp;博客管理</a>
+							<a href="/user/usermyBlow.html"><img src="/statics/img/${img[2]}" />&nbsp;博客管理</a>
 						</li>
 						<li>
-							<a href="view.jsp"><img src="img/color_wheel.png" />&nbsp;页面管理</a>
+							<a href="/user/userview.html"><img src="/statics/img/${img[3]}" />&nbsp;页面管理</a>
 						</li>
 						<li>
-							<a href="comment.jsp"><img src="img/script_edit.png" />&nbsp;评论管理</a>
+							<a href="/user/usercomment.html"><img src="/statics/img/${img[4]}" />&nbsp;评论管理</a>
 						</li>
 						<li>
-							<a href="#"><img src="img/chart_pie.png" />&nbsp;分类标签</a>
+							<a href="#"><img src="/statics/img/${img[5]}" />&nbsp;分类标签</a>
 						</li>
 						<li>
-<<<<<<< HEAD
-							<a href="show.jsp"><img src="img/folder_go.png" />&nbsp;文件管理</a>
-=======
-							<a href="/user/userfile.html"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
->>>>>>> 00001
-						</li>
-						<li>
-							<a href="link.jsp"><img src="img/tag_blue.png" />&nbsp;友链管理</a>
-						</li>
-						<li>
-							<a href=""><img src="img/wrench.png" />&nbsp;系统设置</a>
+							<a href="/user/usersystem1.html"><img src="/statics/img/${img[6]}" />&nbsp;文件管理</a>
 						</li>
 					</ul>
 				</nav>
@@ -105,7 +95,7 @@
 					<div style="clear: both;"></div>
 				</li>
 				
-				<li class="yinweiLishow" >
+				<li class="yinweiLishowTWO" >
 					<div style="clear: both;"></div>
 					<div id="YINWEIfileshow">
 						<div id="fourDIVshow">
@@ -127,8 +117,6 @@
 							<p class="twoPshow">个好友</p>
 						</div>
 					</div>
-					
-					
 				</li>
 		</ul>
 		</div>
@@ -151,7 +139,7 @@
 						</ul>
 					</div>
 		<div id="ywDIVoneshow">
-						<span id="yinweiSPANshow">系统留言</span>
+						<span class="yinweiSPANshow">系统留言</span>
 						<ul id="ywULoneshow">
 							<li class="ywLiOneshow">
 								<span class="liuyanzheshow">这里写谁留言的</span>

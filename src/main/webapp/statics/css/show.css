@@ -57,6 +57,7 @@
 	top: 48px;
 }
 #articleDIVshow{
+	/*whitesmoke*/
 	background-color: whitesmoke;
 	margin-right:80px;
 	margin-top: 50px;
@@ -70,8 +71,7 @@
 	font-size: 25px;
 	font-family: 楷体;
 }
-.yinweiULTWOshow{
-	list-style: none;
+#yinweiULTWOshow{
 	float:right;
 	margin-top: 20px;
 }
@@ -144,7 +144,7 @@
 	background-color: yellow;
 	margin-right:80px;
 	margin-top: 50px;
-
+	margin-left:30px;
 	 width: 250px;
 	 float: left;
 }
@@ -176,4 +176,7 @@
 }
 #ywDIVend{
 	height: 400px;
+}
+.yinweiLishowTWO{
+	float: right;
 }

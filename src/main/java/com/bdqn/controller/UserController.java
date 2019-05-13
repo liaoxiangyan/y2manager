@@ -29,30 +29,105 @@ public class UserController {
     @Resource(name = "userService")
     private UserService userService;
 
+    @RequestMapping("/useraddBlow.html")
+    public String doView1(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "addBlow";
+    }
+
     @RequestMapping("/userview.html")
-    public String doView(){
+    public String doView(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
         return "view";
     }
 
-    @RequestMapping("/userfile.html")
-    public String doFile(){ return "system";}
+    @RequestMapping("/usersystem1.html")
+    public String doFile2(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "system";
+    }
+
+    @RequestMapping("/userczhi.html")
+    public String doFile3(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "czhi";
+    }
+    @RequestMapping("/userzhu.html")
+    public String doFile10(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "zhu";
+    }
+
+    @RequestMapping("/usercomment.html")
+    public String doFile11(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "comment";
+    }
+
+    @RequestMapping("/userlookcomment.html")
+    public String doFile4(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "czhi";
+    }
+
+    @RequestMapping("/usermodifyBlogger.html")
+    public String doFile5(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "modifyBlogger";
+    }
+
+    @RequestMapping("/usermyBlow.html")
+    public String doFile6(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "myBlow";
+    }
+
+    @RequestMapping("/userselectblogger.html")
+    public String doFile7(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "selectblogger";
+    }
+
+    @RequestMapping("/usershow.html")
+    public String doFile8(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "show";
+    }
+
+    @RequestMapping("/userxie.html")
+    public String doFile9(HttpSession session){
+        String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
+        session.setAttribute("img",imgs);
+        return "xie";
+    }
+
 
     @RequestMapping("/dologin.html")
     public String doLogin(HttpSession session,
                           @RequestParam(value = "temp",required = false) String temp){
         String[] imgs = {"user.png","book_edit.png","book.png","color_wheel.png","script_edit.png","chart_pie.png","folder_go.png","tag_blue.png","wrench.png"};
         String[] imgss = {"imgtp/confused.ico","imgtp/cool.ico","imgtp/cry.ico","imgtp/fire.ico","imgtp/grimace.ico","imgtp/miao.ico","imgtp/prettiness.ico","imgtp/question.ico","imgtp/shout.ico"};
-        session.setAttribute("img",imgs);
+        System.out.println(temp+"<======================");
         if(temp!=null){
-
             if(temp.equals("1")||temp=="1"){
-
+                session.setAttribute("img",imgs);
             }else {
                 session.setAttribute("img",imgss);
             }
-            return "redirect:/user/userview.html";
+            return "view";
         }
-        return "view";
+        return "show";
     }
 
     public boolean addFile(String choose,String file) {
@@ -136,7 +211,7 @@ public class UserController {
         return "system";
     }
 
-    @RequestMapping("/system.html")
+    @RequestMapping("/usersystem.html")
     public String showOne(@RequestParam(value = "lujin",required = false) String lujin
             ,@RequestParam(value = "chooseYW",required = false) String chooseYW){
 
@@ -150,7 +225,7 @@ public class UserController {
                 }
             }
         }
-        return "first";
+        return "redirect:/user/usersystem1.html";
     }
 
 

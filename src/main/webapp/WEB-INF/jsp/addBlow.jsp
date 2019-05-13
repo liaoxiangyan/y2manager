@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<title>新增博客</title>
 		<link rel="stylesheet" href="/statics/css/style.css" />
-		<link rel="stylesheet" href="statics/css/public.css" />
+		<link rel="stylesheet" href="/statics/css/public.css" />
 		<script src="/statics/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="/statics/js/lunboutu.js"></script>
 		<script type="text/javascript" src="/statics/js/time.js"></script>
@@ -44,31 +44,25 @@
 				<nav>
 					<ul class="list">
 						<li>
-							<a href="system.jsp"><img src="/statics/img/user.png" />&nbsp;用户管理</a>
+							<a href="/user/usershow.html"><img src="/statics/img/${img[0]}" class = "ywIMG"/>&nbsp;用户管理</a>
 						</li>
 						<li>
-							<a href="addBlow.jsp"><img src="/statics/img/book_edit.png" /> &nbsp;发表博客</a>
+							<a href="/user/useraddBlow.html"><img src="/statics/img/${img[1]}" class = "ywIMG"/> &nbsp;发表博客</a>
 						</li>
 						<li>
-							<a href="/blogger/bloggerSerch.html"><img src="/statics/img/book.png" />&nbsp;博客管理</a>
+							<a href="/user/usermyBlow.html"><img src="/statics/img/${img[2]}" class = "ywIMG"/>&nbsp;博客管理</a>
 						</li>
 						<li>
-							<a href="view.jsp"><img src="/statics/img/color_wheel.png" />&nbsp;页面管理</a>
+							<a href="/user/userview.html"><img src="/statics/img/${img[3]}" class = "ywIMG"/>&nbsp;页面管理</a>
 						</li>
 						<li>
-							<a href="comment.jsp"><img src="/statics/img/script_edit.png" />&nbsp;评论管理</a>
+							<a href="/user/usercomment.html"><img src="/statics/img/${img[4]}" class = "ywIMG"/>&nbsp;评论管理</a>
 						</li>
 						<li>
-							<a href="#"><img src="/statics/img/chart_pie.png" />&nbsp;分类标签</a>
+							<a href="#"><img src="/statics/img/${img[5]}" class = "ywIMG"/>&nbsp;分类标签</a>
 						</li>
 						<li>
-							<a href="show.jsp"><img src="/statics/img/folder_go.png" />&nbsp;文件管理</a>
-						</li>
-						<li>
-							<a href="link.jsp"><img src="/statics/img/tag_blue.png" />&nbsp;友链管理</a>
-						</li>
-						<li>
-							<a href=""><img src="/statics/img/wrench.png" />&nbsp;系统设置</a>
+							<a href="/user/usersystem1.html"><img src="/statics/img/${img[6]}" class = "ywIMG"/>&nbsp;文件管理</a>
 						</li>
 					</ul>
 				</nav>

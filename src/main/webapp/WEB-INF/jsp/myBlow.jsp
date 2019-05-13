@@ -41,31 +41,25 @@
         <nav>
             <ul class="list">
                 <li>
-                    <a href="system.jsp"><img src="/statics/img/user.png"/>&nbsp;用户管理</a>
+                    <a href="/user/usershow.html"><img src="/statics/img/${img[0]}" />&nbsp;用户管理</a>
                 </li>
                 <li>
-                    <a href="addBlow.jsp"><img src="/statics/img/book_edit.png"/>&nbsp;发表博客</a>
+                    <a href="/user/useraddBlow.html"><img src="/statics/img/${img[1]}" /> &nbsp;发表博客</a>
                 </li>
                 <li>
-                    <a href="myBlow.jsp"><img src="/statics/img/book.png"/>&nbsp;博客管理</a>
+                    <a href="/user/usermyBlow.html"><img src="/statics/img/${img[2]}" />&nbsp;博客管理</a>
                 </li>
                 <li>
-                    <a href="view.jsp"><img src="/statics/img/color_wheel.png"/>&nbsp;页面管理</a>
+                    <a href="/user/userview.html"><img src="/statics/img/${img[3]}" />&nbsp;页面管理</a>
                 </li>
                 <li>
-                    <a href="comment.jsp"><img src="/statics/img/script_edit.png"/>&nbsp;评论管理</a>
+                    <a href="/user/usercomment.html"><img src="/statics/img/${img[4]}" />&nbsp;评论管理</a>
                 </li>
                 <li>
-                    <a href="#"><img src="/statics/img/chart_pie.png"/>&nbsp;分类标签</a>
+                    <a href="#"><img src="/statics/img/${img[5]}" />&nbsp;分类标签</a>
                 </li>
                 <li>
-                    <a href="show.jsp"><img src="/statics/img/folder_go.png"/>&nbsp;文件管理</a>
-                </li>
-                <li>
-                    <a href="link.jsp"><img src="/statics/img/tag_blue.png"/>&nbsp;友链管理</a>
-                </li>
-                <li>
-                    <a href=""><img src="/statics/img/wrench.png"/>&nbsp;系统设置</a>
+                    <a href="/user/usersystem1.html"><img src="/statics/img/${img[6]}" />&nbsp;文件管理</a>
                 </li>
             </ul>
         </nav>
