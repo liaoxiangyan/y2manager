@@ -9,12 +9,38 @@ public class Blogger {
     private  String bPostDate;//发表时间
     private  String bTitle;//博客标题
     private  String bContent;//博客内容
-    private  String bCommenterName;//博客评论者
-    private  String bCommentContent;//博客评论内容
-    private  Integer bCommenterCount;//博客评论者人数
-    private  Integer bPageView;//浏览量
+    private  Integer bCommenterCount;//博客评论者人数等同于bComment的个数
+    private  Integer bPageView;//浏览量  点击次数
     private  Integer linkid;//链接id
     private  Integer fileUploadId;//文件上传id
+
+    private String bCreateName;//博客类别
+    private String linkName;//链接
+    private String fileUploadName;//文件上传
+
+    public String getbCreateName() {
+        return bCreateName;
+    }
+
+    public void setbCreateName(String bCreateName) {
+        this.bCreateName = bCreateName;
+    }
+
+    public String getLinkName() {
+        return linkName;
+    }
+
+    public void setLinkName(String linkName) {
+        this.linkName = linkName;
+    }
+
+    public String getFileUploadName() {
+        return fileUploadName;
+    }
+
+    public void setFileUploadName(String fileUploadName) {
+        this.fileUploadName = fileUploadName;
+    }
 
     public Integer getbId() {
         return bId;
@@ -54,22 +80,6 @@ public class Blogger {
 
     public void setbContent(String bContent) {
         this.bContent = bContent;
-    }
-
-    public String getbCommenterName() {
-        return bCommenterName;
-    }
-
-    public void setbCommenterName(String bCommenterName) {
-        this.bCommenterName = bCommenterName;
-    }
-
-    public String getbCommentContent() {
-        return bCommentContent;
-    }
-
-    public void setbCommentContent(String bCommentContent) {
-        this.bCommentContent = bCommentContent;
     }
 
     public Integer getbCommenterCount() {
@@ -112,8 +122,7 @@ public class Blogger {
                 ", bPostDate='" + bPostDate + '\'' +
                 ", bTitle='" + bTitle + '\'' +
                 ", bContent='" + bContent + '\'' +
-                ", bCommenterName='" + bCommenterName + '\'' +
-                ", bCommentContent='" + bCommentContent + '\'' +
+
                 ", bCommenterCount=" + bCommenterCount +
                 ", bPageView=" + bPageView +
                 ", linkid=" + linkid +
