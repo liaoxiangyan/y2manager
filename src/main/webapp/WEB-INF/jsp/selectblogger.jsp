@@ -8,6 +8,8 @@
 		<title>查看博客</title>
 		<link rel="stylesheet" href="/statics/css/style.css" />
 		<link rel="stylesheet" href="/statics/css/public.css" />
+		<script src="/statics/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/statics/js/comment.js.js"></script>
 	</head>
 
 	<body>
@@ -71,19 +73,26 @@
 				</nav>
 			</div>
 				<div class="right" id="rightblogger">
-					<c:forEach items="${bloggerList}" var="li">
-
-					</c:forEach>
+					<form action="/blogger/addBComment.html" method="post" id="myform">
 					<dl>
-						<dt>博客标题:${li.}</dt>
-						<dd>博主:${}</dd>
-						<dd>博客内容:${}</dd>
-						<dd>博客类别:${} 预览次数:${} 发表时间:${}</dd>
+
+						<dt>博客标题:${blogger.bTitle}</dt>
+						<dd style="display: none"><input  name="bId" value="${blogger.bId}"/></dd>
+						<dd>博主:admin<input  name="bId" name="name" value="${blogger.bId}"/></dd>
+						<dd>博客内容:${blogger.bContent}</dd>
+						<dd>博客类别:${blogger.bCreateName} 预览次数:${blogger.bPageView} 发表时间:${blogger.bPostDate}</dd>
 						<dd>请注意文明用语!</dd>
-						<dd>请给博主留言：<input type="text" id="commentContent"/></dd>
-						<dd id="comment"><input type="submit" value="评论"/></dd>
+
+						<dd>请给博主留言：<input type="text" id="commentContent" name="commentContent"/></dd>
+						<dd id="comment"><input type="submit" value="评论" /></dd>
 					</dl>
+					</form>
 				</div>
+			<div id="commentcontents">
+				<c:forEach items="${bCommentList}" var="li">
+					<p>${li.id}</p><p>${li.bCommentContent}<span>${li.bDate}</span></p>
+				</c:forEach>
+			</div>
 			</div>
 		</div>
 	</body>

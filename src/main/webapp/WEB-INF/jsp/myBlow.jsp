@@ -44,7 +44,7 @@
                     <a href="system.jsp"><img src="/statics/img/user.png"/>&nbsp;用户管理</a>
                 </li>
                 <li>
-                    <a href="addBlow.jsp"><img src="/statics/img/book_edit.png"/> &nbsp;发表博客</a>
+                    <a href="addBlow.jsp"><img src="/statics/img/book_edit.png"/>&nbsp;发表博客</a>
                 </li>
                 <li>
                     <a href="myBlow.jsp"><img src="/statics/img/book.png"/>&nbsp;博客管理</a>
@@ -72,19 +72,20 @@
     </div>
     <div class="right">
         <div id="serchcontent">
-            <form action="" method="post" id="form">
-                <span id="spantitle">博客标题:&nbsp;<input type="search" name=""/></span>
+            <form action="/blogger/serchBlogger.html" method="post" id="form">
+                <span id="spantitle">博客标题:&nbsp;<input type="search" name="bTitle"/></span>
                 <span id="spantype">博客类别:&nbsp;
-				<select>
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
+				<select name="bCreateName">
+                    <option value="暴食">暴食</option>
+                    <option value="淫欲">淫欲</option>
+                    <option value="愤怒">愤怒</option>
+                    <option value="傲慢">傲慢</option>
+                    <option value="贪婪">贪婪</option>
+                    <option value="嫉妒">嫉妒</option>
+                    <option value="懒惰">懒惰</option>
 				</select>
 				</span>
-                <input type="submit" value="查询"/><span id="spanadd"><a href="addBlow.jsp">写博客</a></span>
+                <input type="submit" value="查询"/><span id="spanadd"><a href="#" onclick="location.href='/blogger/myBlow.html'">写博客</a></span>
             </form>
         </div>
         <table id="bloggeristable">
@@ -96,20 +97,22 @@
                 <td>发表时间</td>
                 <td>操作</td>
             </tr>
+            <c:forEach items="${bloggerList}" var="li">
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <td>${li.bId}</td>
+                <td>${li.bTitle}</td>
+                <td>${li.bCreateName}</td>
+                <td>${li.bPageView}</td>
+                <td>${li.bPostDate}</td>
                 <td>
-                    <input type="button" value="查看" id="spanserch" onclick="location.href='selectblogger.html'"/>
-                    <input type="button" value="修改" id="spanmodify" onclick="location.href='modifyBlogger.html'"/>
+                    <input type="button" value="查看" id="spanserch" onclick="location.href='/blogger/selectblogger.html?bId=${li.bId}'"/>
+                    <input type="button" value="修改" id="spanmodify" onclick="location.href='/blogger/modifyBlogger.html?bId=${li.bId}'"/>
                     <!--如果不是自己的博客，则此按钮不可用-->
                     <input type="button" value="删除" id="spandel" onclick="confirm('确认删除此博客吗(文件及友链会一起删除)？')"/>
                     <!--如果不是自己的博客，则此按钮不可用-->
                 </td>
             </tr>
+            </c:forEach>
         </table>
 
     </div>

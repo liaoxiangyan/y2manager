@@ -5,38 +5,45 @@
 <mapper namespace="com.bdqn.dao.blogger.BloggerMapper">
     <!--查询全部信息-->
     <select id="getBloggerList" resultType="com.bdqn.pojo.Blogger">
-        SELECT * FROM blogger AS b
-        INNER JOIN bloggerType AS bt ON b.bTypeId=bt.bTypeId
-        INNER JOIN link AS l ON b.linkid=l.linkid
-        INNER JOIN fileUpload AS f ON b.fileUploadId=f.fileUploadId
+        SELECT * FROM blogger
     </select>
-
+    <!--根据id查询-->
+    <select id="getBloggerListById" resultType="com.bdqn.pojo.Blogger">
+        SELECT * FROM blogger where bId=#{bId}
+    </select>
+    <!--根据标题和类别查询-->
     <select id="getBloggerByName" resultType="com.bdqn.pojo.Blogger">
-SELECT * FROM `blogger` where bTitle=#{bTitle};
+        SELECT * FROM `blogger`where 1=1
+        <trim prefix="where" suffixOverrides="and | or">
+            <if test="bTitle !=null and bTitle!=''">
+                 and bTitle like CONCAT('%',#{bTitle},'%')
+            </if>
+            <if test="bCreateName !=null and bCreateName!=''">
+                 and bCreateName=#{bCreateName};
+            </if>
+        </trim>
     </select>
 
+    <!--新增-->
     <insert id="addBlogger" parameterType="com.bdqn.pojo.Blogger">
-INSERT INTO `blogger`(bId,bTypeId,bPostDate,bTitle,bContent,bCommenterName,bCommentContent,bCommenterCount,bPageView,linkid,fileUploadId)
-VALUES(NULL,#{bTypeId},#{bPostDate},#{bTitle},#{bContent},#{bCommenterName},#{bCommentContent},#{bCommenterCount},#{bPageView},#{linkid},#{fileUploadId});
+        INSERT INTO `blogger`(bId,bTitle, bCreateName, bPostDate, bContent, bPageView, linkName, fileUploadName)
+        VALUES(NULL,#{bTitle},#{bCreateName},#{bPostDate},#{bContent},#{bPageView},#{linkName},#{fileUploadName});
     </insert>
-
+    <!--修改-->
     <update id="updateBlogger" parameterType="com.bdqn.pojo.Blogger">
-        UPDATE `blogger`
+        UPDATE `blogger`set
         <trim prefix="set" suffixOverrides="," suffix=" where bId=#{bId}">
-            <if test="bTypeId">proCode=#{bTypeId},</if>
-            <if test="bPostDate">proName=#{bPostDate},</if>
-            <if test="bTitle">proDesc=#{bTitle},</if>
-            <if test="bContent">proContact=#{bContent},</if>
-            <if test="bCommenterName">proPhone=#{bCommenterName},</if>
-            <if test="bCommentContent">proAddress=#{bCommentContent},</if>
-            <if test="bCommenterCount">proFax=#{bCommenterCount},</if>
-            <if test="bPageView">createdBy=#{bPageView},</if>
-            <if test="linkid">creationDate=#{linkid},</if>
-            <if test="fileUploadId">modifyDate=#{fileUploadId},</if>
+            <if test="bTitle != null and bTitle != ''"> bTitle=#{bTitle},</if>
+            <if test="bCreateName!= null and bCreateName != ''"> bCreateName=#{bCreateName},</if>
+            <if test="bPostDate != null and bPostDate != ''"> bPostDate=#{bPostDate},</if>
+            <if test="bContent != null and bContent != ''"> bContent=#{bContent},</if>
+            <if test="bPageView != null and bPageView != ''"> bPageView=#{bPageView},</if>
+            <if test="linkName != null and linkName != ''"> linkName=#{linkName},</if>
+            <if test="fileUploadName != null and fileUploadName != ''"> fileUploadName=#{fileUploadName},</if>
         </trim>
     </update>
-
+    <!--删除-->
     <delete id="delBlogger" parameterType="Integer">
-DELETE FROM `blogger` WHERE `bId`=#{bId}
+            DELETE FROM `blogger` WHERE `bId`=#{bId}
     </delete>
 </mapper>

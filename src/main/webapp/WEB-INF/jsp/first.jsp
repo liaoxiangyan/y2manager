@@ -95,7 +95,7 @@
                     <a href="addBlow.jsp"><img src="/statics/img/book_edit.png"/>&nbsp;发表博客</a>
                 </li>
                 <li>
-                    <a href="/blogger/bloggerlist.html"><img src="/statics/img/book.png"/>&nbsp;博客管理</a>
+                    <a href="/blogger/bloggerSerch.html"><img src="/statics/img/book.png"/>&nbsp;博客管理</a>
                 </li>
                 <li>
                     <a href="view.jsp"><img src="/statics/img/color_wheel.png"/>&nbsp;页面管理</a>
@@ -109,9 +109,7 @@
                 <li>
                     <a href="show.jsp"><img src="/statics/img/folder_go.png"/>&nbsp;文件管理</a>
                 </li>
-                <li>
-                    <a href="link.jsp"><img src="/statics/img/tag_blue.png"/>&nbsp;友链管理</a>
-                </li>
+
                 <li>
                     <a href="#"><img src="/statics/img/wrench.png"/>&nbsp;系统设置</a>
                 </li>
@@ -122,46 +120,26 @@
         <div id="left">
             <dl>
                 <dt>最新博客</dt>
-                <dd>1</dd>
-                <dd>2</dd>
-                <dd>3</dd>
-                <dd>4</dd>
-                <dd>5</dd>
-                <dd>6</dd>
-                <dd>7</dd>
-                <dd>8</dd>
-                <dd>9</dd>
-                <dd>10</dd>
+                <%--<c:forEach items="${}" var="li">
+                   <dd>${}</dd>
+                </c:forEach>--%>
+
             </dl>
         </div>
         <div id="center">
             <dl>
                 <dt>最新博主</dt>
-                <dd>1</dd>
-                <dd>2</dd>
-                <dd>3</dd>
-                <dd>4</dd>
-                <dd>5</dd>
-                <dd>6</dd>
-                <dd>7</dd>
-                <dd>8</dd>
-                <dd>9</dd>
-                <dd>10</dd>
+                <%--<c:forEach items="${}" var="li">
+                    <dd>${}</dd>
+                </c:forEach>--%>
             </dl>
         </div>
         <div id="right">
             <dl>
                 <dt>热门博客</dt>
-                <dd>1</dd>
-                <dd>2</dd>
-                <dd>3</dd>
-                <dd>4</dd>
-                <dd>5</dd>
-                <dd>6</dd>
-                <dd>7</dd>
-                <dd>8</dd>
-                <dd>9</dd>
-                <dd>10</dd>
+                <%--<c:forEach items="${}" var="li">
+                    <dd>${}</dd>
+                </c:forEach>--%>
             </dl>
         </div>
     </div>

@@ -10,14 +10,21 @@ import java.util.List;
 public class BloggerServiceImpl implements  BloggerService {
     @Resource
     private BloggerMapper bloggerMapper;
+
+
     @Override
     public List<Blogger> getBloggerList() {
         return bloggerMapper.getBloggerList();
     }
 
-   @Override
-    public Blogger getBloggerByName(String name) {
-        return bloggerMapper.getBloggerByName(name);
+    @Override
+    public Blogger getBloggerListById(Integer bId) {
+        return bloggerMapper.getBloggerListById(bId);
+    }
+
+    @Override
+    public List<Blogger> getBloggerByName(String name, String bCreateName) {
+        return bloggerMapper.getBloggerByName(name,bCreateName);
     }
 
     @Override
@@ -25,14 +32,13 @@ public class BloggerServiceImpl implements  BloggerService {
         return bloggerMapper.addBlogger(blogger);
     }
 
-   @Override
-    public int delBlogger(int id) {
-        return bloggerMapper.delBlogger(id);
-    }
-
-   @Override
+    @Override
     public int updateBlogger(Blogger blogger) {
         return bloggerMapper.updateBlogger(blogger);
     }
 
+    @Override
+    public int delBlogger(Integer bId) {
+        return bloggerMapper.delBlogger(bId);
+    }
 }

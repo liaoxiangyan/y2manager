@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.dao.bComment.BCommentMapper">
+    <!--查询全部信息-->
+    <select id="getbCommentList" resultType="com.bdqn.pojo.BComment">
+        SELECT * FROM `bcomment`
+    </select>
+    <!--新增-->
+    <insert id="addbComment" parameterType="com.bdqn.pojo.BComment">
+        INSERT INTO `bcomment` (`bCid`,`bid`,`id`,`bCContent`,`bDate`)
+        VALUES(NULL,,bid=#{bid},id=#{id},bCContent=#{bCContent},bDate=#{bDate})
+    </insert>
+</mapper>

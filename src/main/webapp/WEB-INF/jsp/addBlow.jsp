@@ -6,8 +6,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>新增博客</title>
-				<link rel="stylesheet" href="/statics/css/style.css" />
-		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="/statics/css/style.css" />
+		<link rel="stylesheet" href="statics/css/public.css" />
+		<script src="/statics/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/statics/js/lunboutu.js"></script>
+		<script type="text/javascript" src="/statics/js/time.js"></script>
 	</head>
 
 	<body>
@@ -47,7 +50,7 @@
 							<a href="addBlow.jsp"><img src="/statics/img/book_edit.png" /> &nbsp;发表博客</a>
 						</li>
 						<li>
-							<a href="myBlow.jsp"><img src="/statics/img/book.png" />&nbsp;博客管理</a>
+							<a href="/blogger/bloggerSerch.html"><img src="/statics/img/book.png" />&nbsp;博客管理</a>
 						</li>
 						<li>
 							<a href="view.jsp"><img src="/statics/img/color_wheel.png" />&nbsp;页面管理</a>
@@ -71,60 +74,13 @@
 				</nav>
 			</div>
 			<div class="right">
-		<form action="" method="post" id="form">
+		<form action="/blogger/addblogger.html" method="post" id="form">
 			<table>
 				<tr>
 					<td colspan="3" style="text-align: center;">
 						<h3>新增博客</h3></td>
 				</tr>
-				<tr>
-					<td>博客标题:</td>
-					<td><input type="text" name="" /></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>博客内容:</td>
-					<td><textarea></textarea></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>发表时间:</td>
-					<td><input type="date" name="" /></td>
-					<td>yyyy-MM-dd</td>
-				</tr>
-				<tr>
-					<td>博客分类:</td>
-					<td>
-						<select name="">
-							<option value="">1</option>
-							<option value="">2</option>
-							<option value="">3</option>
-							<option value="">4</option>
-							<option value="">5</option>
-							<option value="">6</option>
-						</select>
-					</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>友情链接:</td>
-					<td><input type="url" name="" /></td>
-					<td></td>
-				</tr>
 
-				<tr>
-					<td>上传文件</td>
-					<td><input type="file" name="" /></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="submit" id="addsubmit" value="提交" /></td>
-					<td>
-						<input type="reset" id="resetsubmit" value="重置" />
-					</td>
-					<td><input type="button" id="backbutton" value="返回" /></td>
-				</tr>
-			</table>
 		</form>
 		</div>
 		</div>

@@ -6,10 +6,6 @@
     <!--查询全部信息-->
     <select id="getUserList" resultType="com.bdqn.pojo.User">
         SELECT * FROM `user`;
-        <!--<trim suffix="where" suffixOverrides="and | or">
-    <if test="">
-    </if>
-</trim>-->
     </select>
 <!--
     <select id="getUserByName" resultType="com.bdqn.pojo.User">

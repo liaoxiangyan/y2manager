@@ -71,59 +71,56 @@
 				</nav>
 			</div>
 			<div class="right">
-		<form action="" method="post" id="form">
+		<form action="/blogger/modifyBlogger.html" method="post" id="form">
 			<table>
-				<tr>
-					<td colspan="3" style="text-align: center;">
-						<h3>修改博客</h3></td>
-				</tr>
-				<tr>
-					<td>博客标题:</td>
-					<td><input type="text" name="" /></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>博客内容:</td>
-					<td><textarea></textarea></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>发表时间:</td>
-					<td><input type="date" name="" /></td>
-					<td>yyyy-MM-dd</td>
-				</tr>
-				<tr>
-					<td>博客分类:</td>
-					<td>
-						<select name="">
-							<option value="">1</option>
-							<option value="">2</option>
-							<option value="">3</option>
-							<option value="">4</option>
-							<option value="">5</option>
-							<option value="">6</option>
-						</select>
-					</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>友情链接:</td>
-					<td><input type="url" name="" /></td>
-					<td></td>
-				</tr>
+			<tr>
+				<td>博客标题:</td>
+				<td><input type="text" name="bTitle" value="${blogger.bTitle}" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>博客内容:</td>
+				<td><textarea name="bContent">${blogger.bContent}</textarea></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>发表时间:</td>
+				<td><input type="date" name="bPostDate" value="${blogger.bTitle}"/></td>
+				<td>yyyy-MM-dd</td>
+			</tr>
+			<tr>
+				<td>博客分类:</td>
+				<td>
+					<select name="bCreateName">
+						<option value="暴食" selected=${blogger.bCreateName}=="暴食"?"":selected>暴食</option>
+						<option value="淫欲" selected=${blogger.bCreateName}=="淫欲"?"":selected>淫欲</option>
+						<option value="愤怒" selected=${blogger.bCreateName}=="愤怒"?"":selected>愤怒</option>
+						<option value="傲慢" selected=${blogger.bCreateName}=="傲慢"?"":selected>傲慢</option>
+						<option value="贪婪" selected=${blogger.bCreateName}=="贪婪"?"":selected>贪婪</option>
+						<option value="嫉妒" selected=${blogger.bCreateName}=="嫉妒"?"":selected>嫉妒</option>
+						<option value="懒惰" selected=${blogger.bCreateName}=="懒惰"?"":selected>懒惰</option>
+					</select>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>友情链接:</td>
+				<td><input type="url" name="linkName" />${blogger.linkName}</td>
+				<td></td>
+			</tr>
 
-				<tr>
-					<td>上传文件</td>
-					<td><input type="file" name="" /></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="submit" id="addsubmit" value="修改" /></td>
-					<td>
-						<input type="reset" id="resetsubmit" value="重置" />
-					</td>
-					<td><input type="button" id="backbutton" value="返回" /></td>
-				</tr>
+			<tr>
+				<td>上传文件</td>
+				<td><input type="file" name="fileUploadName" />${blogger.fileUploadName}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="submit" id="addsubmit" value="提交" /></td>
+				<td>
+					<input type="reset" id="resetsubmit" value="重置" />
+				</td>
+				<td><input type="button" id="backbutton" value="返回" onclick="history.back();"/></td>
+			</tr>
 			</table>
 		</form>
 		</div>
